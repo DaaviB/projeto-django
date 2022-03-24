@@ -5,7 +5,7 @@ from django.shortcuts import render
 
 
 def home(request):
-    return HttpResponse('Home Page')
+    return render(request, 'recipes/home.html')
 
 
 def about(request):
