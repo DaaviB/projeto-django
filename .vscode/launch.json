@@ -5,18 +5,15 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "python": "${command:python.interpreterPath}",
-            "justMyCode": true,
-            "console": "integratedTerminal",
-            "autoReload": {"enable": true},
             "name": "Python: Django",
             "type": "python",
             "request": "launch",
-            "program": "./manage.py",
+            "program": "${workspaceFolder}/manage.py",
             "args": [
                 "runserver"
             ],
             "django": true,
+            "justMyCode": true
         }
     ]
 }
