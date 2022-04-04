@@ -292,3 +292,18 @@ h6 {
     margin: 2rem;
     padding: 0 2rem;
 }
+
+/* generics */
+
+.center {
+    text-align: center;
+}
+
+.m-x {
+    margin-right: var(--spacing-gutter-medium);
+    margin-left: var(--spacing-gutter-medium);
+}
+.m-y {
+    margin-top: var(--spacing-gutter-medium);
+    margin-bottom: var(--spacing-gutter-medium);
+}
