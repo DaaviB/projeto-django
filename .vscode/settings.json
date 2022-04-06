@@ -1,106 +1,26 @@
 {
-    "workbench.iconTheme": "vscode-icons",
-    "editor.suggestSelection": "first",
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "window.zoomLevel": 0,
+  "editor.fontSize": 14,
+  "python.languageServer": "Pylance", // ms-python.vscode-pylance
+  "python.testing.unittestEnabled": false, // ms-python.python
+  "python.testing.pytestEnabled": true,
+  "python.testing.pytestArgs": [], // -x to bail
+  "python.linting.flake8Enabled": true,
+  "python.linting.mypyEnabled": true,
+  "python.linting.pylintArgs": [
+    "--load-plugins=pylint_django",
+    "--errors-only"
+  ],
+  "python.formatting.autopep8Args": ["--indent-size=4"],
+  "python.defaultInterpreterPath": "venv/bin/python",
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.python", // ms-python.python
+    "editor.tabSize": 4,
+    "editor.insertSpaces": true,
+    "editor.formatOnSave": true,
     "editor.formatOnType": true,
-    "terminal.integrated.defaultProfile.windows": "PowerShell",
-    "editor.linkedEditing": true,
-    "explorer.confirmDelete": false,
-    "liveServer.settings.donotShowInfoMsg": true,
-    "explorer.confirmDragAndDrop": false,
-    "editor.wordWrap": "on",
-    "editor.wordWrapColumn": 79,
-    "workbench.editor.wrapTabs": true,
-    "html.format.wrapLineLength": 100,
-    "editor.formatOnPaste": true,
-    "diffEditor.codeLens": true,
-    "diffEditor.wordWrap": "on",
-    "workbench.editorAssociations": {
-        "*.epub": "default"
-    },
-    "workbench.colorTheme": "OM Theme (Night Owl Italic)",
-    "bracket-pair-colorizer-2.depreciation-notice": false,
-    "git.confirmSync": false,
-    "gitlens.views.contributors.showAllBranches": true,
-    "python.analysis.completeFunctionParens": true,
-    "python.analysis.useLibraryCodeForTypes": false,
-    "workbench.startupEditor": "none",
-    "terminal.integrated.ignoreProcessNames": [
-        "oh-my-posh",
-        "bash"
-    ],
-    "terminal.integrated.enableMultiLinePasteWarning": false,
-    "editor.fontFamily": "Fira Code Retina",
-    "editor.fontSize": 12,
-    "python.globalModuleInstallation": true,
-    "vsintellicode.java.completionsEnabled": false,
-    "vsintellicode.typescript.completionsEnabled": false,
-
-    "window.zoomLevel": 0,
-    "python.languageServer": "Pylance", // ms-python.vscode-pylance
-    "python.testing.unittestEnabled": false, // ms-python.python
-    "python.testing.pytestEnabled": true,
-    "python.testing.pytestArgs": [], // -x to bail
-    "python.linting.flake8Enabled": true,
-    "python.linting.mypyEnabled": true,
-    "python.linting.pylintArgs": [
-      "--load-plugins=pylint_django",
-      "--errors-only"
-    ],
-    "python.formatting.autopep8Args": ["--indent-size=4"],
-    // "python.defaultInterpreterPath": "venv/bin/python",
-    "[python]": {
-      "editor.defaultFormatter": "ms-python.python", // ms-python.python
-      "editor.tabSize": 4,
-      "editor.insertSpaces": true,
-      "editor.formatOnSave": true,
-      "editor.formatOnType": true,
-      "editor.codeActionsOnSave": {
-        "source.organizeImports": true
-      }
-    },
-    "[html]": {
-      "editor.formatOnSave": true,
-      "editor.defaultFormatter": "vscode.html-language-features",
-      "editor.quickSuggestions": {
-        "other": true,
-        "comments": true,
-        "strings": true
-      }
-    },
-    "[django-html]": {
-      "editor.formatOnSave": false,
-      "editor.defaultFormatter": "vscode.html-language-features",
-      "editor.quickSuggestions": {
-        "other": true,
-        "comments": true,
-        "strings": true
-      }
-    },
-    "files.associations": {
-      "*.js": "javascript",
-      "*.jsx": "javascriptreact",
-      "*.xml": "html",
-      "*.svg": "html",
-      "*.html": "html",
-      "*.py": "python",
-      "django-html": "html",
-      "**/*.html": "html",
-      "**/templates/**/*.html": "django-html",
-      "**/base_templates/**/*.html": "django-html",
-      "**/requirements{/**,*}.{txt,in}": "pip-requirements",
-    },
-    "emmet.includeLanguages": {
-      "django-html": "html", // batisteo.vscode-django
-      "javascript": "javascriptreact",
-      "typescript": "typescriptreact"
-    },
-    "tabnine.experimentalAutoImports": true,
-    "git.autofetch": true,
-    "cSpell.language": "en,pt,pt-PT",
-    "editor.bracketPairColorization.enabled": true,
-    "editor.columnSelection": true,
-    "editor.quickSuggestionsDelay": 2,
-    "explorer.compactFolders": false
-
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": true
+    }
+  },
 }
