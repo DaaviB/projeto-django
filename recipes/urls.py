@@ -10,4 +10,5 @@ urlpatterns = [
          views.category, name='category'
          ),
     path("recipe/<int:id>/", views.recipe, name='recipe'),
+    path("recipes/search/", lambda request: ..., name='search'),
 ]
