@@ -1,21 +1,31 @@
 {
-    // Use o IntelliSense para saber mais sobre os atributos possíveis.
-    // Focalizar para exibir as descrições dos atributos existentes.
-    // Para obter mais informações, acesse: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
-        {
-            "name": "Python: Django",
-            "type": "python",
-            "request": "launch",
-            "program": "${workspaceFolder}/manage.py",
-            "args": [
-                "runserver"
-            ],
-            "django": true,
-            "justMyCode": true,
-            "console": "internalConsole",
-            "internalConsoleOptions": "neverOpen",
-        }
+      {
+        "name": "Django",
+        "type": "python",
+        "internalConsoleOptions": "neverOpen",
+        "request": "launch",
+        "stopOnEntry": false,
+        "console": "internalConsole",
+        "program": "${workspaceRoot}/manage.py",
+          "args": [
+              "runserver",
+              "8000"
+          ],
+          "debugOptions": [
+              "RedirectOutput",
+              "DjangoDebugging"
+          ],
+        //   "env": {
+        //       "DJANGO_DB_NAME": "aroounddb",
+        //       "DJANGO_DB_USER": "codeslave",
+        //       "DJANGO_DB_PASSWORD": "codeslave",
+        //       "DJANGO_DB_HOST": "172.17.0.2",
+        //       "DJANGO_DB_PORT": "5432",
+        //       "DJANGO_DEBUG": "True",
+        //       "DJANGO_SETTINGS_MODULE": "settings"
+        //   }
+      },
     ]
-}
+  }
