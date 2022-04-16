@@ -13,10 +13,6 @@
               "runserver",
               "8000"
           ],
-          "debugOptions": [
-              "RedirectOutput",
-              "DjangoDebugging"
-          ],
         //   "env": {
         //       "DJANGO_DB_NAME": "aroounddb",
         //       "DJANGO_DB_USER": "codeslave",
