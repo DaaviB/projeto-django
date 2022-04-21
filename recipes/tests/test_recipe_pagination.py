@@ -9,13 +9,14 @@ class MakePaginationTest(RecipeTestBase):
 
         request = HttpRequest()
         request.GET = {'page': 1}
+        per_page = 9
         page_obj, pagination = make_pagination(
             request,
             range(1, 21),
-            1
+            per_page
         )
         self.assertEqual(
-            1,
+            per_page,
             page_obj.paginator.per_page,
         )
 
