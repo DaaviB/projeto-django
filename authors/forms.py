@@ -3,6 +3,27 @@ from django.contrib.auth.models import User
 
 
 class RegisterForm(forms.ModelForm):
+    password = forms.CharField(
+        required=True,
+        widget=forms.PasswordInput(attrs={
+            'placeholder': 'Type your password',
+        }),
+        label='Password',
+        error_messages={
+            'required': 'Password must not be empty',
+        }
+    )
+    password_2 = forms.CharField(
+        required=True,
+        widget=forms.PasswordInput(attrs={
+            'placeholder': 'Repeat your password',
+        }),
+        label='Confirm Password',
+        error_messages={
+            'required': 'Password must not be empty',
+        }
+    )
+
     class Meta:
         model = User
         fields = [
@@ -20,23 +41,27 @@ class RegisterForm(forms.ModelForm):
             'first_name': 'First name',
             'last_name': 'Last name',
             'email': 'E-mail',
-            'password': 'Password',
         }
 
         help_texts = {
-            'email': 'The email must be valid'
+            'email': 'The email must be valid',
         }
 
         error_messages = {
-            'required': 'This field must not be empty'
+            'required': 'This field must not be empty',
         }
 
         widgets = {
             'first_name': forms.TextInput(attrs={
-                'placeholder': 'Type your first name here'
+                'placeholder': 'Ex.: John',
             }),
-            'password': forms.PasswordInput(attrs={
-                'placeholder': 'Type your password here',
-            })
-
+            'last_name': forms.TextInput(attrs={
+                'placeholder': 'Ex.: Ohen',
+            }),
+            'email': forms.EmailInput(attrs={
+                'placeholder': 'Ex.: email@email.com',
+            }),
+            'username': forms.TextInput(attrs={
+                'placeholder': 'Your Username',
+            }),
         }
