@@ -330,7 +330,10 @@ h6 {
 }
 
 .errorlist {
-    color: var(--color-error-dark); 
+    color: var(--color-error-dark);
+}
+.errorlist li {
+    margin-bottom: .5rem; 
 }
 
 .form-content input {
