@@ -7,11 +7,6 @@ from .base import AuthorBaseTest
 
 @pytest.mark.functional_test
 class AuthorRegisterTest(AuthorBaseTest):
-    def get_by_placeholder(self, web_element, placeholder):
-        return web_element.find_element(
-            By.XPATH,
-            f'//input[@placeholder="{placeholder}"]'
-        )
 
     def fill_form_dummy_data(self, form):
         fields = form.find_elements(By.TAG_NAME, 'input')
