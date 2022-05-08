@@ -1,8 +1,8 @@
 <div class="recipe recipe-list-item">
-    {% if recipe.cover.url is not Null %}
+    {% if recipe.cover.url is not None %}
         <div class="recipe-cover">
             <a href="{% url 'recipes:recipe' recipe.id %}">
-                <img src="{{ recipe.cover.url }}" alt="Temporário">
+                <img src="{{ recipe.cover.url }}" alt="Receita">
             </a>
         </div>
     {% endif %}
