@@ -110,7 +110,7 @@ def dashboard_recipe_edit(request, id):
         raise Http404()
 
     form = AuthorRecipeForm(
-        request.POST or None,
+        data=request.POST or None,
         instance=recipe
     )
 
