@@ -99,3 +99,4 @@ class RegisterForm(forms.ModelForm):
                     password_confirmation_error,
                 ],
             })
+        return cleaned_data
