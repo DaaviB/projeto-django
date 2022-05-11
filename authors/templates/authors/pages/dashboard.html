@@ -12,8 +12,21 @@
       <h3>Your recipes</h3>
       <ul>
         {% for recipe in recipes %}
-          <li><a href="{% url 'authors:dashboard_recipe_edit' recipe.id %}">{{ recipe.title }}</a></li>
-        {% empty %}
+          <li>
+            <a href="{% url 'authors:dashboard_recipe_edit' recipe.id %}">
+              {{ recipe.title }}
+            </a> - 
+            <form 
+            class="inline-form form-delete" 
+            action="{% url 'authors:dashboard_recipe_delete'%}" 
+            method="POST"
+            >
+              {% csrf_token %}
+              <input type="hidden" name="recipe-id" value="{{ recipe.id }}">
+              <button class="plaintext-button delete-icon" type="submit">x</button>
+            </form>
+          </li>
+          {% empty %}
           <li>
             <p>You do not have recipes, please, create one.</p>
           </li>

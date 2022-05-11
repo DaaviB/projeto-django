@@ -383,6 +383,9 @@ a {
     font-size: 1.6rem;
 }
 
+.delete-icon {
+    color: var(--color-primary-dark);
+}
 
 /* Messages */
 
