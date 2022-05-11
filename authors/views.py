@@ -4,7 +4,6 @@ from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
 from django.http import Http404
 from django.shortcuts import redirect, render
-from django.template.defaultfilters import slugify
 from django.urls import reverse
 from recipes.models import Recipe
 
@@ -147,7 +146,6 @@ def dashboard_recipe_new(request):
             recipe.author = request.user
             recipe.preparation_steps_is_html = False
             recipe.is_published = False
-            recipe.slug = slugify(recipe.title)
 
             recipe.save()
             messages.success(request, 'Sua receita foi criada com sucesso.')
