@@ -1,4 +1,5 @@
 
+from authors.forms import AuthorRecipeForm, LoginForm, RegisterForm
 from django.contrib import messages
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
@@ -6,8 +7,6 @@ from django.http import Http404
 from django.shortcuts import redirect, render
 from django.urls import reverse
 from recipes.models import Recipe
-
-from .forms import AuthorRecipeForm, LoginForm, RegisterForm
 
 
 def register_view(request):
