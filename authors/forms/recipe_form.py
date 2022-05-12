@@ -59,7 +59,7 @@ class AuthorRecipeForm(forms.ModelForm):
             self._my_errors['title'].append(
                 'Title must have at least 5 chars.')
 
-        if len(description) < 20:
+        if len(description) < 10:
             self._my_errors['description'].append(
                 'Description must have at least more than 20 characters.'
             )
@@ -78,7 +78,7 @@ class AuthorRecipeForm(forms.ModelForm):
             self._my_errors['servings'].append(
                 'Servings must be a positive number')
 
-        if len(preparation_steps) < 60:
+        if len(preparation_steps) < 30:
             self._my_errors['preparation_steps'].append(
                 'Preparation_steps must have at least more than 20 characters.'
             )
