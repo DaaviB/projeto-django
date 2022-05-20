@@ -11,8 +11,7 @@ from recipes.models import Recipe
 
 @method_decorator(login_required(
     login_url='authors:login', redirect_field_name='next',
-    name='dispatch'
-))
+), name='dispatch')
 class DashboardRecipe(View):
     def get_recipe(self, id=None):
         recipe = None
