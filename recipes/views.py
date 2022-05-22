@@ -118,7 +118,21 @@ class RecipeDetailView(DetailView):
         ctx.update(
             {
                 'is_detail_page': True,
+
             }
         )
 
         return ctx
+
+    def get_queryset(self, *args, **kwargs):
+
+        qs = super().get_queryset(*args, **kwargs)
+        qs = qs.filter(
+            pk=self.kwargs.get('pk'),
+            is_published=True,
+        ).order_by('-id')
+
+        if not qs:
+            raise Http404()
+
+        return qs
