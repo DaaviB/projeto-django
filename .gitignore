@@ -292,3 +292,12 @@ GitHub.sublime-settings
 !.vscode/launch.json 
 !.vscode/extensions.json 
 .history
+
+#My Ignore
+gunicorn-error-log
+db.sqlite3
+static/
+
+# Add again for course purpose
+!db.sqlite3
+__localcode
