@@ -298,4 +298,4 @@ gunicorn-error-log
 db.sqlite3
 static/
 
-__localcode
+__localcode/
