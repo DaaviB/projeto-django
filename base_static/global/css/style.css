@@ -523,9 +523,6 @@ li {
     .main-header {
         grid-template-columns: 1fr;
     }
-    .nav-container {
-        margin-top: 1rem;;
-    }
     .nav-items-container {
         justify-content: center;
     }
