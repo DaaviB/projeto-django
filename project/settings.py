@@ -35,6 +35,11 @@ CSRF_TRUSTED_ORIGINS = [
     'https://recipes-django.davibrit.tech', 'https://davibrit.tech']
 CSRF_COOKIE_SECURE = True
 SESSION_COOKIE_SECURE = True
+
+INTERNAL_IPS = [
+    '127.0.0.1',
+]
+
 # Application definition
 
 INSTALLED_APPS = [
@@ -46,10 +51,12 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'recipes',
     'authors',
+    'debug_toolbar',
 ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    "debug_toolbar.middleware.DebugToolbarMiddleware",
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
