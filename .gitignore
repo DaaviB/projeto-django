@@ -1,4 +1,4 @@
-__localcode/
+__localcode/*
 
 
 # Byte-compiled / optimized / DLL files
@@ -298,4 +298,3 @@ gunicorn-error-log
 db.sqlite3
 static/
 
-__localcode/

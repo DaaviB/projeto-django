@@ -39,7 +39,7 @@ class Recipe(models.Model):
         return self.title
 
     def get_absolute_url(self):
-        return reverse("recipes:recipe", kwargs={"id": self.id})
+        return reverse("recipes:recipe", kwargs={"pk": self.id})
 
     def save(self, *args, **kwargs):
         if not self.slug:
