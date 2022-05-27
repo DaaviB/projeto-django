@@ -29,9 +29,10 @@ SECRET_KEY = os.environ.get('SECRET_KEY', 'INSECURE')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True if os.environ.get('DEBUG') == '1' else False
 
-ALLOWED_HOSTS: List[str] = ['*', ]
-
-
+ALLOWED_HOSTS: List[str] = ['recipes-django.davibrit.tech', 'davibrit.tech']
+CSRF_TRUSTED_ORIGINS = ['https://recipes-django.davibrit.tech', 'https://davibrit.tech']
+CSRF_COOKIE_SECURE = True
+SESSION_COOKIE_SECURE = True
 # Application definition
 
 INSTALLED_APPS = [
