@@ -52,6 +52,7 @@ INSTALLED_APPS = [
     'recipes',
     'authors',
     'debug_toolbar',
+    'tag',
 ]
 
 MIDDLEWARE = [
