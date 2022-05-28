@@ -3,12 +3,23 @@ import os
 from django.db.models import Q
 from django.forms.models import model_to_dict
 from django.http import Http404, JsonResponse
+from django.shortcuts import render
 from django.views.generic import DetailView, ListView
 from utils.pagination import make_pagination
 
 from .models import Recipe
 
 PER_PAGE = int(os.environ.get('PER_PAGE', 6))
+
+
+def theory(request, *args, **kwargs):
+    recipes = Recipe.objects.all().filter(
+        author__id=9
+    )
+
+    context = {
+        'recipes': recipes}
+    return render(request, 'recipes/pages/theory.html', context=context)
 
 
 class RecipeListViewBase(ListView):

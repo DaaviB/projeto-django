@@ -5,6 +5,7 @@ from . import views
 app_name = 'recipes'
 
 urlpatterns = [
+    path('recipes/theory/', views.theory, name='theory'),
     path("", views.RecipeListViewHome.as_view(), name='home'),
     path(
         "recipes/search/", views.RecipeListViewSearch.as_view(), name='search'
