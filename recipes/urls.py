@@ -8,7 +8,12 @@ urlpatterns = [
     path('recipes/theory/', views.theory, name='theory'),
     path("", views.RecipeListViewHome.as_view(), name='home'),
     path(
-        "recipes/search/", views.RecipeListViewSearch.as_view(), name='search'
+        "recipes/search/", views.RecipeListViewSearch.as_view(),
+        name='search'
+    ),
+    path(
+        "recipes/tags/<slug:slug>/", views.RecipeListViewTag.as_view(),
+        name='tag'
     ),
     path("recipes/category/<int:category_id>/",
          views.RecipeListViewCategory.as_view(), name='category'
