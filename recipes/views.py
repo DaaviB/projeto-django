@@ -138,7 +138,8 @@ class RecipeListViewTag(RecipeListViewBase):
     def get_context_data(self, *args, **kwargs):
         ctx = super().get_context_data(*args, **kwargs)
         page_title = Tag.objects.filter(
-            slug=self.kwargs.get('slug', '')).first()
+            slug=self.kwargs.get('slug', '')
+        ).first()
 
         if not page_title:
             page_title = 'No recipes found'
@@ -173,11 +174,14 @@ class RecipeDetailView(DetailView):
     def get_queryset(self, *args, **kwargs):
 
         qs = super().get_queryset(*args, **kwargs)
+
+        qs = qs.select_related('author', 'category',)
+        qs = qs.prefetch_related('tags',)
+
         qs = qs.filter(
             pk=self.kwargs.get('pk'),
             is_published=True,
         ).order_by('-id')
-
         if not qs:
             raise Http404()
 
