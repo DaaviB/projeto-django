@@ -19,7 +19,8 @@ class AuthorRecipeForm(forms.ModelForm):
         model = Recipe
         fields = '__all__'
         exclude = 'created_at', 'update_at', \
-            'slug', 'preparation_steps_is_html', 'author', 'is_published'
+            'slug', 'preparation_steps_is_html', 'author', \
+            'is_published', 'tags',
 
         widgets = {
             'cover': forms.FileInput(
