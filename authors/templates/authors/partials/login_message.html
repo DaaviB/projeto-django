@@ -5,7 +5,7 @@
   <a href="{% url 'authors:dashboard' %}">See your recipes</a>, 
   <a href="{% url 'authors:dashboard_recipe_new' %}">create a new recipe</a> or
   {% include 'authors/partials/form_logout.html' %}
-  <a href="" class="authors-logout-link" href='#'>click here</a>
+  <a class="authors-logout-link" href='{% url 'authors:logout' %}'>click here</a>
   to logout.
 </div>
 {% endif %}
