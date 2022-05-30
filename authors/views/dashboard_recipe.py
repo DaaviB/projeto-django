@@ -71,9 +71,7 @@ class DashboardRecipe(View):
             messages.success(request, 'Sua receita foi salva com sucesso.')
             return redirect(
                 reverse(
-                    'authors:dashboard_recipe_edit', args=(
-                        recipe.id,
-                    )
+                    'authors:dashboard',
                 )
             )
 
