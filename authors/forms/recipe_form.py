@@ -48,7 +48,7 @@ class AuthorRecipeForm(forms.ModelForm):
     def clean(self, *args, **kwargs):
         super_clean = super().clean(*args, **kwargs)
 
-        cleaned_data = self.cleaned_data
+        cleaned_data = super_clean
 
         title = cleaned_data.get('title')
         description = cleaned_data.get('description')
