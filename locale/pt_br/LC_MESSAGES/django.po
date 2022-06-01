@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-05-31 19:30-0300\n"
+"POT-Creation-Date: 2022-05-31 21:03-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,18 +18,86 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
+#: recipes/models.py:20
+msgid "Title"
+msgstr "Título"
+
+#: recipes/models.py:22
+msgid "Description"
+msgstr "Descrição"
+
+#: recipes/models.py:24
+#, fuzzy
+#| msgid "Preparation"
+msgid "Preparation time"
+msgstr "Tempo de preparo"
+
+#: recipes/models.py:26
+#, fuzzy
+#| msgid "Preparation"
+msgid "Preparation time unit"
+msgstr "Unidade do tempo de preparo"
+
+#: recipes/models.py:27 recipes/templates/recipes/partials/recipe.html:69
+msgid "Servings"
+msgstr "Porções"
+
+#: recipes/models.py:29
+#, fuzzy
+#| msgid "Servings"
+msgid "Servings unit"
+msgstr "Unidade de Porções"
+
+#: recipes/models.py:30
+#, fuzzy
+#| msgid "Preparation"
+msgid "Preparation steps"
+msgstr "Passo-a-Passo do preparo"
+
+#: recipes/models.py:32
+msgid "preparation steps is html"
+msgstr "Passo-a-Passo do preparo é HTML"
+
+#: recipes/models.py:34
+msgid "Created_at"
+msgstr "Criado em"
+
+#: recipes/models.py:36
+msgid "Update_at"
+msgstr "Atualizado em"
+
+#: recipes/models.py:38
+msgid "Is_published"
+msgstr "Está publicada"
+
+#: recipes/models.py:41
+msgid "Cover"
+msgstr "Imagem"
+
+#: recipes/models.py:44 recipes/views.py:90
+msgid "Category"
+msgstr "Categoria"
+
+#: recipes/models.py:47
+msgid "Author"
+msgstr "Autor"
+
+#: recipes/models.py:50
+msgid "Tags"
+msgstr "Tags"
+
+#: recipes/models.py:82
+msgid "Recipe"
+msgstr "Receita"
+
+#: recipes/models.py:83
+msgid "Recipes"
+msgstr "Receitas"
+
 #: recipes/templates/recipes/partials/recipe.html:63
 msgid "Preparation"
 msgstr "Preparo"
 
-#: recipes/templates/recipes/partials/recipe.html:69
-msgid "Servings"
-msgstr "Porções"
-
 #: recipes/templates/recipes/partials/recipe.html:82
 msgid "read more"
-msgstr "ler mais"
-
-#: recipes/views.py:90
-msgid "Category"
-msgstr "Categoria"
+msgstr "Ler mais"
